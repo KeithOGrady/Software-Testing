@@ -1,15 +1,17 @@
-﻿<form>
-    <input id="genderIn" type="text" placeholder="Gender" />
-    <br />
-    <input id="ageIn" type="text" placeholder="Age" />
-    <br />
-    <button id="btn" type="submit">Submit</button>
-</form>
+﻿<input id="genderIn" type="text" placeholder="Gender" />
+<br />
+<input id="ageIn" type="text" placeholder="Age" />
+<br />
+<button id="btn">Submit</button>
+<textarea id="premium" placeholder="Premium"></textarea>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-    var gender = $("#genderIn").text();
-    var age = $("#ageIn").text();
-    $("#bnt").click(function () {
-        alert("Gender = " + gender);
+    var gender = $("#genderIn").val();
+    var age = $("#ageIn").val();
+    var pre = 5.0;
+    $("#btn").click(function () {
+        //alert("Gender = " + gender);
+        console.log("Gender = " + gender);
+        $("#premium").text("Premium = " + pre);
     });
 </script>
